@@ -1,0 +1,121 @@
+{
+  "name": "book-rent-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "@material-ui/core": "^4.11.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "reflexbox": "^4.0.6",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --watchAll=false",
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .tsx,.ts .",
+    "pt": "prettier --write .",
+    "cm": "cz"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "prettier"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint-config-prettier": "^7.1.0",
+    "husky": "^4.3.7",
+    "lint-staged": "^10.5.3",
+    "prettier": "2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && yarn test"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "eslint --cache --fix",
+    "*.{js,ts,tsx,css,md}": "prettier --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "types": {
+        "breaking-change": {
+          "description": "Changes which break backwards compatibility (major)",
+          "title": "BREAKING CHANGES"
+        },
+        "feat": {
+          "description": "A new feature (minor)",
+          "title": "Features"
+        },
+        "fix": {
+          "description": "A bug fix (patch)",
+          "title": "Fixes"
+        },
+        "refactor": {
+          "description": "A code change that neither fixes a bug nor adds a feature (patch)",
+          "title": "Refactors"
+        },
+        "docs": {
+          "description": "Documentation only changes (patch)",
+          "title": "Documentation changes"
+        },
+        "style": {
+          "description": "Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc) (patch)",
+          "title": "Style changes"
+        },
+        "perf": {
+          "description": "A code change that improves performance (patch)",
+          "title": "Perfomance changes"
+        },
+        "test": {
+          "description": "Adding missing tests or correcting existing tests (patch)",
+          "title": "Tests"
+        },
+        "build": {
+          "description": "Changes that affect the build system or external dependencies (patch)",
+          "title": "Build changes"
+        },
+        "chore": {
+          "description": "Other changes that don't modify src or test files (patch)",
+          "title": "Chores"
+        },
+        "revert": {
+          "description": "Reverts a previous commit (patch)",
+          "title": "Revert changes"
+        },
+        "ci": {
+          "description": "Changes to our CI configuration files and scripts (no-release)",
+          "title": "CI/CD changes"
+        },
+        "no-release": {
+          "description": "Changes that doesn't need to trigger a release (no-release)",
+          "title": "CI/CD changes"
+        }
+      }
+    }
+  }
+}
