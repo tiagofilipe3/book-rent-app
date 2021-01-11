@@ -1,12 +1,15 @@
 version: "3.8"
 services:
-  client:
+  book-rent-app:
     stdin_open: true
     build:
       context: .
       dockerfile: Dockerfile.dev
     ports:
-    - "3000:3000"
+      - "3000:3000"
     volumes:
-    - "/app/node_modules"
-    - "./:/app"
+      - "/app/node_modules"
+      - "./:/app"
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
