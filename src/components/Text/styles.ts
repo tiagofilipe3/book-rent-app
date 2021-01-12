@@ -14,7 +14,7 @@ import styled from '@emotion/styled'
 
 import { fontFamily } from '../../variants/fontFamily'
 
-export const StyledText = styled.div`
+export const StyledText = styled.span`
   ${fontFamily}
   ${space}
   ${lineHeight};
