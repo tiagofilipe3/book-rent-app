@@ -4,8 +4,12 @@ To start, type:
 
 `docker-compose build`
 
-then:
+followed by:
 
 `docker-compose up`
+
+then you can open in your browser:
+
+`http://localhost:3000`
 
 You can search, add, modify, delete and rent books. To see the book details, click on the row.
