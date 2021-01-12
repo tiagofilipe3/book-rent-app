@@ -1,4 +1,4 @@
-Book rent app made with CRA, redux, emotion and docker
+Book rent app made with CRA, Redux, emotion, Jest and docker
 
 To start, type:
 
