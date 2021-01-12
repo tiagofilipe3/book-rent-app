@@ -7,21 +7,14 @@ import { Provider } from 'react-redux'
 
 import { privateRoutes } from './routes/routes'
 import PrivateRoute from './routes/PrivateRoute'
-import { ptBRMessages } from './i18n/pt-br'
-import { enUSMessages } from './i18n/en-us'
 import { store } from './redux/store'
 import LoginPage from './features/Login'
 import GlobalStyles from './globalStyles'
 import Logout from './features/Logout'
 import PageStructure from './components/PageStructure'
+import { locale, messages } from './i18n'
 
 const history = createBrowserHistory()
-
-const locale = 'en-us'
-const messages = {
-  'pt-br': ptBRMessages,
-  'en-us': enUSMessages,
-}
 
 ReactDOM.render(
   <React.StrictMode>
