@@ -1,4 +1,6 @@
-Book rent app made with CRA, Redux, emotion, Jest and docker
+Book rent app made with CRA, Redux, emotion, Jest and docker.
+
+Please use node 18 for better compatibility.
 
 To start, type:
 
